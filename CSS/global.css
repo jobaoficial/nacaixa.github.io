@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* --- GERAL ---*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+    background-color: #1d1d1d;
+    scroll-behavior:smooth;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: auto 10%;
+}
+
+p {
+    color: #fff;
+}
+
+span {
+    font-weight: 900;
+    font-size: 15pt;
+}
+
+.title {
+    color: #caf729;
+    font-weight: 900;
+    font-size: 30pt;
+}
+
+h1.titulo {
+    text-align: center;
+}
+
+h2 {
+    color: #838383;
+}
+
+/* --- LOADER ---*/
+
+#loader {
+    
+    top: 40%;
+    left: 45%;
+    justify-content: center;
+    position: absolute;
+    z-index: 9999;
+    width: 55px;
+    height: 100px;
+    background: linear-gradient(#0000 calc(1*100%/6),#caf729 0 calc(3*100%/6),#0000 0),
+              linear-gradient(#0000 calc(2*100%/6),#caf729 0 calc(4*100%/6),#0000 0),
+              linear-gradient(#0000 calc(3*100%/6),#caf729 0 calc(5*100%/6),#0000 0);
+    background-size: 12px 400%;
+    background-repeat: no-repeat;
+    animation: matrix 1s infinite linear;
+}
+
+@keyframes matrix {
+    0% {
+      background-position: 0% 100%, 50% 100%, 100% 100%
+    }
+  
+    100% {
+      background-position: 0% 0%, 50% 0%, 100% 0%
+    }
+  }
+      
+
+/* --- HEADER ---*/
+
+.logo {
+    width: 200px;
+}
+
+header {
+    width: 100%;
+    align-items: center;
+    background-color: #caf729;
+    
+}
+
+nav {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+
+nav ul li a {
+    padding: 70px 15px;
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 15px;
+    font-weight: 900;
+    transition: .1s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #1d1d1d;
+    color: #ffff;
+}
+
+.menu_mobile_content {
+    display: none;
+}
+
+/* --- HEADER ---*/
+
+/* --- FOOTER ---*/
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 10%;
+    background-color: #131313;
+}
+
+.logo_footer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #caf729;
+    
+}
+
+.logo_footer img {
+   width: 100px;
+}
+
+footer .icons {
+    margin-top: 45px;
+    cursor: pointer;
+}
+
+footer i {
+    color: #caf729;
+    font-size: 40px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+footer i:hover {
+    transform: scale(1.08);
+}
+
+.footer_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.footer_text {
+    width: 60%;
+    text-align: justify;
+}
+
+footer p {
+    color: #575757;
+
+}
+
+footer h3 {
+    color: #caf729;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #575757;
+    font-size: 15px;
+    transition: .2s;
+}
+
+footer ul li a:hover {
+    color: #ffffff;
+}
+
+footer 
+.menu,
+.return {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- FOOTER ---*/
+
+
+
+@media screen and (max-width: 700px){
+
+    /* --- HEADER ---*/
+
+    header {
+        padding: 30px 0;
+    }
+
+    header .lado_dir {
+        display: none;
+    }
+
+    .menu_mobile_content {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    button {
+        display: inline-block;
+        background-color: #131313;
+        border: none;
+        color: #838383;
+        text-align: center;
+        font-size: 17px;
+        padding: 10px;
+        width: 100%;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+       
+    button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.2s;
+    }
+       
+    button:hover {
+        background-color: #caf729;
+        color: #131313;
+    }
+
+    /* --- GALERIA ---*/
+
+    .galeria{
+        margin-top: 50px;
+        padding: 0 10%;
+        width: 100%;
+        height: 80vh;
+        top: 50%;
+        display: grid;
+        grid-auto-rows: 35vh;  
+    }
+
+    .wg1{
+        grid-column: span 2;
+    }
+    .hg1{
+        grid-row: span 2;
+    }
+    
+    div.galeria{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: calc(50vh / 2);  
+    }
+
+    div.conteudo h1{
+        font-size: 25px;
+    }
+
+    /* --- JOGOS DE HOJE ---*/
+
+    .jogos_de_hoje > .interface {
+        width: 80%;
+    }
+
+    .cotacoes {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .bets {
+        margin-top: 0;
+    }
+
+    .dias {
+        display: none;
+    }
+
+    .dias_mobile {
+        display: flex;
+    }
+
+    .title {
+        font-size: 20pt;
+    }
+
+
+    .veja_os_gols > .interface {
+        width: 80%;
+    }
+
+
+    /* --- NEWS ---*/
+
+    
+
+    .news .interface h2, p{
+        width: 100%;
+    }
+
+    .artigo {
+        text-align: justify;
+    }
+
+    .news .title, h2, .publicacao{
+        text-align: center;
+    }
+
+    .img{
+        margin-top: 10px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* --- BRASILEIRÃO ---*/
+
+    .tabela > .interface {
+        display: flex;
+        flex-direction: column;
+        gap: 5%;
+        
+    }
+
+    .match {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .times {
+        gap: 30px;
+        padding: 0 50%;
+    }
+    
+    /* --- FOOTER ---*/
+
+    .footer_info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer_text {
+        width: 100%;
+    }
+
+    footer .menu {
+        display: none;
+    }
+
+}

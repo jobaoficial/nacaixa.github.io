@@ -1,0 +1,40 @@
+
+.img{
+    margin-top: 10px;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- NEWS ---*/
+
+.news .interface h2, p{
+    width: 70%;
+}
+
+.news .interface {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.publicacao {
+    font-size: 10pt;
+}
+
+.publicacao p{
+    color: #838383;
+}
+
+/* --- NEWS ---*/

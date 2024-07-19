@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* --- GERAL ---*/
+
+.loader {
+    width: 45px;
+    height: 40px;
+    background: linear-gradient(#0000 calc(1*100%/6),#fff 0 calc(3*100%/6),#0000 0),
+              linear-gradient(#0000 calc(2*100%/6),#fff 0 calc(4*100%/6),#0000 0),
+              linear-gradient(#0000 calc(3*100%/6),#fff 0 calc(5*100%/6),#0000 0);
+    background-size: 10px 400%;
+    background-repeat: no-repeat;
+    animation: matrix 1s infinite linear;
+    display: block;
+  }
+  
+  @keyframes matrix {
+    0% {
+      background-position: 0% 100%, 50% 100%, 100% 100%
+    }
+  
+    100% {
+      background-position: 0% 0%, 50% 0%, 100% 0%
+    }
+  }
+      
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1d1d1d;
+    scroll-behavior:smooth;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: auto 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: #fff;
+}
+
+span {
+    font-weight: 900;
+    font-size: 15pt;
+}
+
+.title {
+    color: #caf729;
+    font-weight: 900;
+    font-size: 30pt;
+}
+
+h1.titulo {
+    text-align: center;
+}
+
+/* --- HEADER ---*/
+
+.logo {
+    width: 200px;
+}
+
+header {
+    width: 100%;
+    align-items: center;
+    background-color: #caf729;
+}
+
+nav {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+
+nav ul li a {
+    padding: 70px 15px;
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 15px;
+    font-weight: 900;
+    transition: .1s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #1d1d1d;
+    color: #ffff;
+}
+
+/* --- HEADER ---*/
+
+/* --- GALERIA ---*/
+
+.content {
+    width: 100%;
+    height: 25vh;
+}
+
+.wg2{
+    grid-column: span 2;
+}
+
+.hg2{
+    grid-row: span 2;
+}
+
+.galeria{
+    margin-top: 30px;
+    padding: 0 10%;
+    width: 100%;
+    height: 70vh;
+    top: 50%;
+    display: grid;
+    grid-auto-rows: 35vh;
+    
+}
+
+.single-galeria{
+    
+    border: 1px solid #caf729;
+    position: relative;
+    cursor: pointer;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.img img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.overflow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(transparent, black);
+    opacity: 0.2;
+    transition: all 0.2s ease-in-out;
+}
+
+.conteudo{
+    position: absolute;
+    color: white;
+    padding: 4% 5%;
+    bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+div.conteudo h1{
+    font-size: 35px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.conteudo p{
+    font-size: 15px;
+}
+
+
+.single-galeria:hover div.overflow{
+    opacity: 1;
+}
+.single-galeria:hover div.conteudo{
+    bottom: 20px;
+}
+
+/* --- JOGOS ---*\
+\* -------------*/
+
+section.jogos_de_hoje {
+    text-align: center;
+}
+
+.jogos_de_hoje > .interface {
+    width: 60%;
+}
+
+.dias {
+   left: 0;
+   margin-top: 50px;
+   display: flex;
+   gap: 5px;
+}
+
+.dias_mobile {
+    left: 0;
+    margin-top: 50px;
+    display: flex;
+    gap: 5px;
+    display: none;
+    width: 100%;
+ }
+
+.dia {
+    padding: 5px 20px;
+    background: #131313;
+    width: 100%;
+    
+}
+
+.hoje {
+    padding: 5px 20px;
+    border: 1px solid #caf729;
+    width: 100%;
+}
+
+.title {
+    margin-top: 50px;
+    border-bottom: 2px solid #caf729;
+    margin-bottom: 10px;
+}
+
+.times {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.info_jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.match {
+    padding: 20px 0;
+    border-bottom: 1px solid #575757;
+}
+
+.match p {
+    text-align: center;
+    color: #b4b4b4;
+}
+
+.match img {
+    width: 40px;   
+}
+
+.cotacoes, .bets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.bets {
+    padding: 6px 15px;
+    background: #131313;
+    margin-top: 10px;
+    font-size: 9pt;
+}
+
+.casa1 {
+    content: "";
+    padding: 10px 20px;
+    background: #ff5e00;
+}
+
+.casa2 {
+    content: "";
+    padding: 10px 20px;
+    background: #1ba339;
+}
+
+/* --- JOGOS ---*/
+
+/* --- GOLS ---*/
+
+.veja_os_gols > .interface {
+    width: 60%;
+}
+
+.veja_os_gols .title {
+    margin-top: 100px;
+    border-bottom: 2px solid #caf729;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.veja {
+    display: flex;
+}
+
+.veja_os_gols img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.veja_os_gols img:hover {
+    transform: scale(1.02);
+}
+
+
+/* --- GOLS ---*/
+
+/* --- FOOTER ---*/
+
+footer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 10%;
+    background-color: #131313;
+}
+
+.logo_footer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #caf729;
+    
+}
+
+.logo_footer img {
+   width: 100px;
+}
+
+footer i:hover {
+    transform: scale(1.08);
+}
+
+
+.footer_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.footer_text {
+    width: 50%;
+}
+
+footer p {
+    color: #575757;
+
+}
+
+footer h3 {
+    color: #caf729;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #575757;
+    font-size: 15px;
+    transition: .2s;
+}
+
+footer ul li a:hover {
+    color: #ffffff;
+}
+
+
+
+/* --- FOOTER ---*/
